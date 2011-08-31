@@ -1,0 +1,2 @@
+Copyright (c) 2011 Martin Kozák (martinkozak@martinkozak.net)
+Usage of this library is permitted with exception of copyright holder.
