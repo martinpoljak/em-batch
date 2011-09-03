@@ -64,6 +64,15 @@ module EM
         end
         
         alias :"execute!" :execute
+        
+        ##
+        # Returns all calls results.
+        # @return [Array]
+        #
+        
+        def results
+            @batch.results
+        end
     end
     
     ##
@@ -82,11 +91,19 @@ module EM
         @stack
         
         ##
+        # Holds array with results of all calls.
+        # @return [Array]
+        
+        attr_reader :results
+        @results
+        
+        ##
         # Constructor.
         #
         
         def initialize
             @stack = [ ]
+            @results = [ ]
         end
         
         ##
@@ -136,12 +153,12 @@ module EM
             iterator = Proc::new do
                 object, method, args = @stack.shift
                 if object.nil? and method.kind_of? Proc
-                    result = method.call(*args, &caller)
+                    method.call(*args, &caller)
                 elsif not method.nil?
                     if method == :exec
-                        result = object.exec(*args, &caller)
+                        object.exec(*args, &caller)
                     else
-                        result = object.send(method, *args, &caller)
+                        object.send(method, *args, &caller)
                     end
                 elsif not callback.nil?
                     yield *result
@@ -150,7 +167,13 @@ module EM
             
             caller = Proc::new do |*res|
                 EM::next_tick do
-                    result = res
+                    if res.length == 1
+                        result = res.first
+                    else
+                        result = res
+                    end
+                      
+                    @results << result
                     iterator.call()
                 end
             end
