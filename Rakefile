@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "em-batch"
   gem.homepage = "http://github.com/martinkozak/em-batch"
   gem.license = "MIT"
-  gem.summary = "Provides possibility to run more callbacked methods backed by EventMachine of single or more objects by elegant, readable and transparent way in a linear sequence, so subsequently in single batch."
+  gem.summary = "Provides ability to run more callbacked methods backed by EventMachine of single or more objects by elegant, readable and transparent way in a linear sequence, so subsequently in single batch."
   gem.email = "martinkozak@martinkozak.net"
   gem.authors = ["Martin Kozák"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
