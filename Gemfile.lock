@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    callback-batch (0.1.0)
     eventmachine (1.0.0.beta.3)
     git (1.2.5)
     jeweler (1.6.4)
@@ -14,5 +15,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (>= 1.0.0)
+  callback-batch (>= 0.1.0)
   eventmachine
   jeweler (>= 1.5.2)

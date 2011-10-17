@@ -2,6 +2,7 @@ source "http://rubygems.org"
 # Add dependencies required to use your gem here.
 # Example:
 
+gem "callback-batch", ">= 0.1.0"
 gem "eventmachine", ">= 0"
 
 # Add dependencies to develop your gem here.

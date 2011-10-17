@@ -15,10 +15,10 @@ require 'jeweler'
 
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "mp-em-batch"
-#  gem.homepage = "http://github.com/martinkozak/em-file-utils"
-  gem.license = "Private"
-#  gem.summary = "Allows base file operations using UNIX commands such as standard library FileUtils, but returns CommandBuilder objects which allows wide customizations to final call and asynchronous evented EventMachine interface support (although it isn't required). UNIX/Linux based systems only supported."
+  gem.name = "em-batch"
+  gem.homepage = "http://github.com/martinkozak/em-batch"
+  gem.license = "MIT"
+  gem.summary = "Provides possibility to run more callbacked methods backed by EventMachine of single or more objects by elegant, readable and transparent way in a linear sequence, so subsequently in single batch."
   gem.email = "martinkozak@martinkozak.net"
   gem.authors = ["Martin Kozák"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
