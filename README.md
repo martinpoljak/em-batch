@@ -39,9 +39,7 @@ See some trivial examples:
     
     EM::run do
 
-        ###############
-        # Sequencer
-        ###############
+        ### Sequencer
         
         s = CallbackSequencer::new(Foo::new)
         s.foo1
@@ -51,9 +49,7 @@ See some trivial examples:
             p s.results   # will contain [:foo1, :foo2]
         end
     
-        ###############
-        # Batch
-        ###############
+        ### Batch
     
         s = CallbackBatch::new
         f = Foo::new
