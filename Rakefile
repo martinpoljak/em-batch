@@ -19,8 +19,8 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/martinkozak/em-batch"
   gem.license = "MIT"
   gem.summary = "Provides ability to run more callbacked methods backed by EventMachine of single or more objects by elegant, readable and transparent way in a linear sequence, so subsequently in single batch."
-  gem.email = "martinkozak@martinkozak.net"
-  gem.authors = ["Martin Kozák"]
+  gem.email = "martin@poljak.cz"
+  gem.authors = ["Martin Poljak"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
